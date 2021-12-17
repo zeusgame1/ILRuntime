@@ -1325,6 +1325,7 @@ namespace ILRuntime.Runtime.Enviorment
                         if (ilMethod.DelegateAdapter == null)
                         {
                             ilMethod.DelegateAdapter = domain.DelegateManager.FindDelegateAdapter(null, ilMethod, m);
+                            ilMethod.DelegateAdapter.DelegateType = it;
                         }
                         ins = ilMethod.DelegateAdapter;
                     }
@@ -1392,6 +1393,7 @@ namespace ILRuntime.Runtime.Enviorment
                         if (ilMethod.DelegateAdapter == null)
                         {
                             ilMethod.DelegateAdapter = domain.DelegateManager.FindDelegateAdapter(ii, ilMethod, m);
+                            ilMethod.DelegateAdapter.DelegateType = it;
                         }
                         object ins = ilMethod.DelegateAdapter;
                         return ILIntepreter.PushObject(ret, mStack, ins, true);

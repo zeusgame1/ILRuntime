@@ -214,9 +214,9 @@ namespace ILRuntime.Reflection
             else
             {
                 del = iDelegate.Instantiate(appdomain, ilTypeInstance, iDelegate.Method);
-                del.RawMethod = method;
-
+              
             }
+         
             return del.GetConvertor(delegateType);
         }
     }
